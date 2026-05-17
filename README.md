@@ -2,7 +2,9 @@
 
 Automation framework developed using Cypress and JavaScript for frontend E2E and API testing.
 
-## Technologies
+---
+
+# Technologies
 
 - Cypress
 - JavaScript
@@ -11,7 +13,7 @@ Automation framework developed using Cypress and JavaScript for frontend E2E and
 
 ---
 
-## Project Structure
+# Project Architecture
 
 ```bash
 cypress
@@ -29,15 +31,15 @@ cypress
 
 ---
 
-## Implemented Scenarios
+# Implemented Test Scenarios
 
-### Frontend E2E
+## Frontend E2E
 
 - User login
 - User registration
 - Product registration
 
-### API Testing
+## API Testing
 
 - Create user
 - Login API
@@ -45,16 +47,18 @@ cypress
 
 ---
 
-## Design Patterns
+# Design Patterns and Best Practices
 
 - Page Object Model (POM)
-- Service Layer
+- Service Layer Pattern
 - Custom Commands
-- Dynamic Test Data
+- Dynamic Test Data with Faker
+- Reusable Components
+- Separation of Responsibilities
 
 ---
 
-## Installation
+# Installation
 
 ```bash
 npm install
@@ -62,22 +66,38 @@ npm install
 
 ---
 
-## Run Cypress
+# Run Cypress UI
 
 ```bash
-npx cypress open
+npm run cy:open
 ```
 
 ---
 
-## Run Tests Headless
+# Run All Tests Headless
 
 ```bash
-npx cypress run
+npm run cy:run
 ```
 
 ---
 
-## Author
+# Run Frontend Tests
+
+```bash
+npm run test:frontend
+```
+
+---
+
+# Run API Tests
+
+```bash
+npm run test:api
+```
+
+---
+
+# Author
 
 Kamila Polizelo Fiori

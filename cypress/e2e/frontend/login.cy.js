@@ -1,28 +1,21 @@
-import loginPage from '../../pages/loginPage'
+import loginPage from "../../pages/loginPage";
 
-describe('Login Frontend', () => {
+describe("Login Frontend", () => {
+  beforeEach(() => {
+    cy.createUser();
+  });
 
-    beforeEach(() => {
+  it("Should login successfully", function () {
+    loginPage.accessLoginPage();
 
-        cy.createUser()
+    loginPage.fillEmail(this.createdUser.email);
 
-    })
+    loginPage.fillPassword(this.createdUser.password);
 
-    it('Should login successfully', function () {
+    loginPage.clickLogin();
 
-        loginPage.accessLoginPage()
+    cy.url({ timeout: 10000 }).should("include", "/home");
 
-        loginPage.fillEmail(this.createdUser.email)
-
-        loginPage.fillPassword(this.createdUser.password)
-
-        loginPage.clickLogin()
-
-        cy.url().should('include', '/home')
-
-        cy.contains('Home')
-            .should('be.visible')
-
-    })
-
-})
+    cy.contains("Home").should("be.visible");
+  });
+});

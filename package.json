@@ -1,13 +1,16 @@
 {
-  "name": "qa-mouts-test",
+  "name": "qa-automation-challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "QA automation framework using Cypress for frontend and API testing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:frontend": "cypress run --spec cypress/e2e/frontend/**/*",
+    "test:api": "cypress run --spec cypress/e2e/api/**/*"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kamila Polizelo Fiori",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
@@ -15,3 +18,4 @@
     "cypress": "^15.15.0"
   }
 }
+

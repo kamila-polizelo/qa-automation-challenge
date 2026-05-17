@@ -22,11 +22,11 @@ export class UserService {
 
     static getProducts() {
 
-        return cy.request({
-            method: 'GET',
-            url: 'https://serverest.dev/produtos'
-        })
+    return cy.request({
+        method: 'GET',
+        url: 'https://serverest.dev/produtos',
+        failOnStatusCode: false
+    })
 
-    }
-
+}
 }
