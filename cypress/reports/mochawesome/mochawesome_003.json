@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-17T21:27:21.837Z",
+    "end": "2026-05-17T21:27:22.158Z",
+    "duration": 321,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "22afe9e8-a2ce-4f50-9ca3-29b552eb9961",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api\\loginInvalidAPI.cy.js",
+      "file": "cypress\\e2e\\api\\loginInvalidAPI.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6e62ebe6-084f-492f-acd7-7e200f41adb9",
+          "title": "Invalid Login API",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should not login with invalid credentials",
+              "fullTitle": "Invalid Login API Should not login with invalid credentials",
+              "timedOut": null,
+              "duration": 273,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const credentials = {\n  email: \"invalid@email.com\",\n  password: \"wrongpassword\"\n};\n_authService.AuthService.login(credentials, false).then(response => {\n  expect(response.status).to.eq(401);\n  expect(response.body.message).to.eq(\"Email e/ou senha inválidos\");\n});",
+              "err": {},
+              "uuid": "0bcf3d51-d989-4b98-b14a-ccf1e72d1f6c",
+              "parentUUID": "6e62ebe6-084f-492f-acd7-7e200f41adb9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0bcf3d51-d989-4b98-b14a-ccf1e72d1f6c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 273,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

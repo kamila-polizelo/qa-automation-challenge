@@ -1,4 +1,6 @@
-import loginPage from "../../pages/loginPage";
+import { LoginPage } from "../../pages/loginPage";
+
+const loginPage = new LoginPage();
 
 describe("Login Frontend", () => {
   beforeEach(() => {
@@ -6,13 +8,7 @@ describe("Login Frontend", () => {
   });
 
   it("Should login successfully", function () {
-    loginPage.accessLoginPage();
-
-    loginPage.fillEmail(this.createdUser.email);
-
-    loginPage.fillPassword(this.createdUser.password);
-
-    loginPage.clickLogin();
+    cy.login(this.createdUser.email, this.createdUser.password);
 
     cy.url({ timeout: 10000 }).should("include", "/home");
 

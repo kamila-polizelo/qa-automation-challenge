@@ -1,14 +1,10 @@
-import { faker } from "@faker-js/faker";
 import { UserService } from "../../services/userService";
+import { AuthService } from "../../services/authService";
+import { UserFactory } from "../../factories/userFactory";
 
 describe("Login API", () => {
   it("Should login successfully", () => {
-    const user = {
-      nome: faker.person.fullName(),
-      email: faker.internet.email(),
-      password: "teste123",
-      administrador: "true",
-    };
+    const user = UserFactory.createUser();
 
     UserService.createUser(user).then(() => {
       const credentials = {
@@ -16,7 +12,7 @@ describe("Login API", () => {
         password: user.password,
       };
 
-      UserService.login(credentials).then((response) => {
+      AuthService.login(credentials).then((response) => {
         expect(response.status).to.eq(200);
 
         expect(response.body.message).to.eq("Login realizado com sucesso");

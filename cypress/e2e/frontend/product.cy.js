@@ -1,6 +1,9 @@
-import loginPage from "../../pages/loginPage";
-import productPage from "../../pages/productPage";
-import { faker } from "@faker-js/faker";
+import { LoginPage } from "../../pages/loginPage";
+import { ProductPage } from "../../pages/productPage";
+import { ProductFactory } from "../../factories/productFactory";
+
+const loginPage = new LoginPage();
+const productPage = new ProductPage();
 
 describe("Product Frontend", () => {
   beforeEach(() => {
@@ -8,20 +11,9 @@ describe("Product Frontend", () => {
   });
 
   it("Should register product successfully", function () {
-    const product = {
-      name: faker.commerce.productName(),
-      price: "500",
-      description: faker.commerce.productDescription(),
-      quantity: "10",
-    };
+    const product = ProductFactory.createProduct();
 
-    loginPage.accessLoginPage();
-
-    loginPage.fillEmail(this.createdUser.email);
-
-    loginPage.fillPassword(this.createdUser.password);
-
-    loginPage.clickLogin();
+    cy.login(this.createdUser.email, this.createdUser.password);
 
     cy.url().should("include", "/home");
 

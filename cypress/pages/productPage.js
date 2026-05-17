@@ -1,4 +1,4 @@
-class ProductPage {
+export class ProductPage {
   accessProductPage() {
     cy.visit("/admin/cadastrarprodutos");
   }
@@ -23,5 +23,3 @@ class ProductPage {
     cy.get('[data-testid="cadastarProdutos"]').click();
   }
 }
-
-export default new ProductPage();

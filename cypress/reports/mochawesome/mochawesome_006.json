@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-17T21:27:44.243Z",
+    "end": "2026-05-17T21:27:53.227Z",
+    "duration": 8984,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c19d00da-9321-43f7-9577-9cba1f9cba0a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\frontend\\product.cy.js",
+      "file": "cypress\\e2e\\frontend\\product.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dcd8ec9d-d24f-420d-900c-240520a6117e",
+          "title": "Product Frontend",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should register product successfully",
+              "fullTitle": "Product Frontend Should register product successfully",
+              "timedOut": null,
+              "duration": 8932,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const product = _productFactory.ProductFactory.createProduct();\ncy.login(this.createdUser.email, this.createdUser.password);\ncy.url().should(\"include\", \"/home\");\nproductPage.accessProductPage();\nproductPage.fillProductName(product.name);\nproductPage.fillPrice(product.price);\nproductPage.fillDescription(product.description);\nproductPage.fillQuantity(product.quantity);\nproductPage.clickRegisterProduct();\ncy.url().should(\"include\", \"/admin/listarprodutos\");\ncy.contains(product.name).should(\"be.visible\");",
+              "err": {},
+              "uuid": "f511f68b-3c22-4848-80be-f6db7942eeba",
+              "parentUUID": "dcd8ec9d-d24f-420d-900c-240520a6117e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f511f68b-3c22-4848-80be-f6db7942eeba"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8932,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

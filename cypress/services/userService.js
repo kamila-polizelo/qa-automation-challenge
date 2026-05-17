@@ -4,29 +4,10 @@ export class UserService {
 
         return cy.request({
             method: 'POST',
-            url: 'https://serverest.dev/usuarios',
+            url: `${Cypress.env('apiUrl')}/usuarios`,
             body: user
         })
 
     }
 
-    static login(credentials) {
-
-        return cy.request({
-            method: 'POST',
-            url: 'https://serverest.dev/login',
-            body: credentials
-        })
-
-    }
-
-    static getProducts() {
-
-    return cy.request({
-        method: 'GET',
-        url: 'https://serverest.dev/produtos',
-        failOnStatusCode: false
-    })
-
-}
 }

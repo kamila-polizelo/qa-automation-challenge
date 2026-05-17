@@ -1,19 +1,21 @@
-import { UserService } from "../../services/userService";
+import Ajv from "ajv";
+import { ProductService } from "../../services/productService";
+import { productSchema } from "../../schemas/productSchema";
 
 describe("Get Products API", () => {
   it("Should list products successfully", () => {
-    UserService.getProducts().then((response) => {
-      expect(response.status).to.be.oneOf([200, 503]);
+    ProductService.getProducts().then((response) => {
+      expect(response.status).to.eq(200);
 
-      if (response.status === 200) {
-        expect(response.body).to.have.property("quantidade");
+      expect(response.duration).to.be.lessThan(2000);
 
-        expect(response.body).to.have.property("produtos");
+      const ajv = new Ajv();
 
-        expect(response.body.produtos).to.be.an("array");
+      const validate = ajv.compile(productSchema);
 
-        expect(response.duration).to.be.lessThan(2000);
-      }
+      const valid = validate(response.body);
+
+      expect(valid).to.eq(true);
     });
   });
 });

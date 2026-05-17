@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-17T21:27:09.816Z",
+    "end": "2026-05-17T21:27:10.216Z",
+    "duration": 400,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "44d8f5e5-3d0d-4550-995d-32d1c6b3d480",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api\\getProducts.cy.js",
+      "file": "cypress\\e2e\\api\\getProducts.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4ea0e64a-710e-479a-aa7c-7e91ff0f0ed9",
+          "title": "Get Products API",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should list products successfully",
+              "fullTitle": "Get Products API Should list products successfully",
+              "timedOut": null,
+              "duration": 344,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_productService.ProductService.getProducts().then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.duration).to.be.lessThan(2000);\n  const ajv = new _ajv.default();\n  const validate = ajv.compile(_productSchema.productSchema);\n  const valid = validate(response.body);\n  expect(valid).to.eq(true);\n});",
+              "err": {},
+              "uuid": "443b24a5-c6c9-4965-9853-fc272de8c422",
+              "parentUUID": "4ea0e64a-710e-479a-aa7c-7e91ff0f0ed9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "443b24a5-c6c9-4965-9853-fc272de8c422"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 344,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

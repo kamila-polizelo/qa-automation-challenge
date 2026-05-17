@@ -1,25 +1,25 @@
-import { faker } from '@faker-js/faker'
+import { LoginPage } from "../pages/loginPage";
+import { UserFactory } from "../factories/userFactory";
+import { UserService } from "../services/userService";
 
-Cypress.Commands.add('createUser', () => {
+const loginPage = new LoginPage();
 
-    const user = {
-        nome: faker.person.fullName(),
-        email: faker.internet.email(),
-        password: 'teste123',
-        administrador: 'true'
-    }
+Cypress.Commands.add("login", (email, password) => {
+  loginPage.accessLoginPage();
 
-    cy.request({
-        method: 'POST',
-        url: 'https://serverest.dev/usuarios',
-        body: user
+  loginPage.fillEmail(email);
 
-    }).then((response) => {
+  loginPage.fillPassword(password);
 
-        expect(response.status).to.eq(201)
+  loginPage.clickLogin();
+});
 
-        cy.wrap(user).as('createdUser')
+Cypress.Commands.add("createUser", () => {
+  const user = UserFactory.createUser();
 
-    })
+  UserService.createUser(user).then((response) => {
+    expect(response.status).to.eq(201);
 
-})
+    cy.wrap(user).as("createdUser");
+  });
+});
