@@ -1,6 +1,6 @@
 # QA Automation Challenge
 
-Automation framework developed using Cypress and JavaScript for frontend E2E and API testing.
+Automation framework developed using Cypress and JavaScript for frontend E2E and API testing, following modern QA engineering best practices.
 
 ---
 
@@ -10,6 +10,7 @@ Automation framework developed using Cypress and JavaScript for frontend E2E and
 - JavaScript
 - Node.js
 - Faker
+- GitHub Actions
 
 ---
 
@@ -55,6 +56,9 @@ cypress
 - Dynamic Test Data with Faker
 - Reusable Components
 - Separation of Responsibilities
+- CI/CD with GitHub Actions
+- Headless Execution Support
+- Resilient API Validation
 
 ---
 
@@ -95,6 +99,35 @@ npm run test:frontend
 ```bash
 npm run test:api
 ```
+
+---
+
+# CI/CD Pipeline
+
+This project includes a GitHub Actions pipeline configured to:
+
+- Install dependencies
+- Execute Cypress tests automatically
+- Validate frontend and API scenarios
+- Run on push and pull requests
+
+Workflow location:
+
+```bash
+.github/workflows/cypress.yml
+```
+
+---
+
+# Project Highlights
+
+- Frontend and API automation
+- Reusable framework architecture
+- Dynamic and isolated test data
+- CI/CD ready
+- Enterprise-style project organization
+- Scalable automation structure
+- Stable and resilient tests
 
 ---
 
