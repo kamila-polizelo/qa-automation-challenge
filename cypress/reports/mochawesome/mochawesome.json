@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T21:27:05.107Z",
-    "end": "2026-05-17T21:27:05.646Z",
-    "duration": 539,
+    "start": "2026-05-17T21:40:59.746Z",
+    "end": "2026-05-17T21:41:00.594Z",
+    "duration": 848,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8b573f51-7bab-4b62-8e98-124073d711e2",
+      "uuid": "4691a723-a0b5-4552-a2cb-2d6afa508c86",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\createUser.cy.js",
       "file": "cypress\\e2e\\api\\createUser.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4eb871fe-fd21-4ae8-8529-a6a12b883e8d",
+          "uuid": "7f7634f6-faa9-4609-bade-6b383e12d23b",
           "title": "Create User API",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should create user successfully",
               "fullTitle": "Create User API Should create user successfully",
               "timedOut": null,
-              "duration": 488,
+              "duration": 744,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const user = {\n  nome: _faker.faker.person.fullName(),\n  email: _faker.faker.internet.email(),\n  password: 'teste123',\n  administrador: 'true'\n};\n_userService.UserService.createUser(user).then(response => {\n  expect(response.status).to.eq(201);\n  expect(response.body.message).to.eq('Cadastro realizado com sucesso');\n  expect(response.body).to.have.property('_id');\n});",
               "err": {},
-              "uuid": "c6d3ddc8-7c09-430f-991b-6bb426df20ad",
-              "parentUUID": "4eb871fe-fd21-4ae8-8529-a6a12b883e8d",
+              "uuid": "78ccedb6-dde0-42f7-9df8-bb83633e3960",
+              "parentUUID": "7f7634f6-faa9-4609-bade-6b383e12d23b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c6d3ddc8-7c09-430f-991b-6bb426df20ad"
+            "78ccedb6-dde0-42f7-9df8-bb83633e3960"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 488,
+          "duration": 744,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

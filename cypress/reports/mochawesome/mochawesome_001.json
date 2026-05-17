@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T21:27:09.816Z",
-    "end": "2026-05-17T21:27:10.216Z",
-    "duration": 400,
+    "start": "2026-05-17T21:41:07.011Z",
+    "end": "2026-05-17T21:41:07.423Z",
+    "duration": 412,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "44d8f5e5-3d0d-4550-995d-32d1c6b3d480",
+      "uuid": "b424b8ea-a7c0-41f2-a34a-19de1cd22c2f",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\getProducts.cy.js",
       "file": "cypress\\e2e\\api\\getProducts.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4ea0e64a-710e-479a-aa7c-7e91ff0f0ed9",
+          "uuid": "ba8d8678-5ef7-4bff-8d20-61378537c86f",
           "title": "Get Products API",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should list products successfully",
               "fullTitle": "Get Products API Should list products successfully",
               "timedOut": null,
-              "duration": 344,
+              "duration": 353,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "_productService.ProductService.getProducts().then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.duration).to.be.lessThan(2000);\n  const ajv = new _ajv.default();\n  const validate = ajv.compile(_productSchema.productSchema);\n  const valid = validate(response.body);\n  expect(valid).to.eq(true);\n});",
               "err": {},
-              "uuid": "443b24a5-c6c9-4965-9853-fc272de8c422",
-              "parentUUID": "4ea0e64a-710e-479a-aa7c-7e91ff0f0ed9",
+              "uuid": "6c055fc4-5aac-45fd-8e41-61839923b365",
+              "parentUUID": "ba8d8678-5ef7-4bff-8d20-61378537c86f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "443b24a5-c6c9-4965-9853-fc272de8c422"
+            "6c055fc4-5aac-45fd-8e41-61839923b365"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 344,
+          "duration": 353,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

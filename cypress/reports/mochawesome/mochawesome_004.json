@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T21:27:25.828Z",
-    "end": "2026-05-17T21:27:30.017Z",
-    "duration": 4189,
+    "start": "2026-05-17T21:41:26.460Z",
+    "end": "2026-05-17T21:41:30.956Z",
+    "duration": 4496,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "98ffcf9b-ce86-41a6-8ee7-619796236c26",
+      "uuid": "8e5094e2-82c4-4868-aa7b-aa1a9d30ba1d",
       "title": "",
       "fullFile": "cypress\\e2e\\frontend\\invalidLogin.cy.js",
       "file": "cypress\\e2e\\frontend\\invalidLogin.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b6073010-3214-41e6-b43f-8152d69069b5",
+          "uuid": "f748aa57-e326-4cce-9b00-4a67a2af7aa3",
           "title": "Invalid Login Frontend",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should display error message with invalid credentials",
               "fullTitle": "Invalid Login Frontend Should display error message with invalid credentials",
               "timedOut": null,
-              "duration": 4138,
+              "duration": 4429,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit(\"/login\");\nloginPage.fillEmail(\"invalid@email.com\");\nloginPage.fillPassword(\"wrongpassword\");\nloginPage.clickLogin();\ncy.contains(\"Email e/ou senha inválidos\").should(\"be.visible\");",
               "err": {},
-              "uuid": "9c91f224-c2cd-49d7-90c5-0e6e978511c4",
-              "parentUUID": "b6073010-3214-41e6-b43f-8152d69069b5",
+              "uuid": "661aba04-8170-40df-967f-5f21fca36fc9",
+              "parentUUID": "f748aa57-e326-4cce-9b00-4a67a2af7aa3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9c91f224-c2cd-49d7-90c5-0e6e978511c4"
+            "661aba04-8170-40df-967f-5f21fca36fc9"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4138,
+          "duration": 4429,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T21:27:59.273Z",
-    "end": "2026-05-17T21:28:03.156Z",
-    "duration": 3883,
+    "start": "2026-05-17T21:42:06.522Z",
+    "end": "2026-05-17T21:42:10.557Z",
+    "duration": 4035,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "72c337ec-94db-4fc9-aeb3-3910c6cbb340",
+      "uuid": "02b032c7-c5ce-49ff-b4ec-a40118dc6a31",
       "title": "",
       "fullFile": "cypress\\e2e\\frontend\\register.cy.js",
       "file": "cypress\\e2e\\frontend\\register.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6d1cd1fe-2fce-43bc-bc31-04d96b258885",
+          "uuid": "d7bfec61-dded-4220-ab22-e88992493c9d",
           "title": "Register Frontend",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should register user successfully",
               "fullTitle": "Register Frontend Should register user successfully",
               "timedOut": null,
-              "duration": 3823,
+              "duration": 3987,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const user = {\n  name: _faker.faker.person.fullName(),\n  email: _faker.faker.internet.email(),\n  password: \"teste123\"\n};\n_registerPage.default.accessRegisterPage();\n_registerPage.default.fillName(user.name);\n_registerPage.default.fillEmail(user.email);\n_registerPage.default.fillPassword(user.password);\n_registerPage.default.clickRegister();\ncy.contains(\"Cadastro realizado com sucesso\").should(\"be.visible\");",
               "err": {},
-              "uuid": "1c1cfacc-8807-418e-ae78-5ce24e025c9f",
-              "parentUUID": "6d1cd1fe-2fce-43bc-bc31-04d96b258885",
+              "uuid": "cc4b3052-975d-4d40-b97a-c017bfd21a77",
+              "parentUUID": "d7bfec61-dded-4220-ab22-e88992493c9d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1c1cfacc-8807-418e-ae78-5ce24e025c9f"
+            "cc4b3052-975d-4d40-b97a-c017bfd21a77"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3823,
+          "duration": 3987,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
