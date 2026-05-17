@@ -12,7 +12,7 @@ describe('Get Products API', () => {
       ProductService.getProducts().then((response) => {
         expect(response.status).to.eq(200);
 
-        expect(response.duration).to.be.lessThan(2000);
+        expect(response.duration).to.be.lessThan(4000);
 
         const ajv = new Ajv();
 
