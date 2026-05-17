@@ -110,6 +110,7 @@ This project includes a GitHub Actions pipeline configured to:
 - Execute Cypress tests automatically
 - Validate frontend and API scenarios
 - Run on push and pull requests
+- Allow manual execution using workflow_dispatch
 
 Workflow location:
 
@@ -128,6 +129,7 @@ Workflow location:
 - Enterprise-style project organization
 - Scalable automation structure
 - Stable and resilient tests
+- Manual pipeline execution support
 
 ---
 
