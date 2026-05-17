@@ -1,24 +1,24 @@
-import { ProductPage } from "../../pages/productPage";
-import { ProductFactory } from "../../factories/productFactory";
+import { ProductPage } from '../../pages/productPage';
+import { ProductFactory } from '../../factories/productFactory';
 
 const productPage = new ProductPage();
 
-describe("Product Frontend", () => {
+describe('Product Frontend', () => {
   beforeEach(() => {
     cy.createUser();
   });
 
   it(
-    "Should register product successfully",
+    'Should register product successfully',
     {
-      tags: ["@regression", "@frontend"],
+      tags: ['@regression', '@frontend'],
     },
     function () {
       const product = ProductFactory.createProduct();
 
       cy.login(this.createdUser.email, this.createdUser.password);
 
-      cy.url().should("include", "/home");
+      cy.url().should('include', '/home');
 
       productPage.accessProductPage();
 
@@ -32,9 +32,9 @@ describe("Product Frontend", () => {
 
       productPage.clickRegisterProduct();
 
-      cy.url().should("include", "/admin/listarprodutos");
+      cy.url().should('include', '/admin/listarprodutos');
 
-      cy.contains(product.name).should("be.visible");
-    },
+      cy.contains(product.name).should('be.visible');
+    }
   );
 });

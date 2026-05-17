@@ -1,6 +1,6 @@
 export class ProductPage {
   accessProductPage() {
-    cy.visit("/admin/cadastrarprodutos");
+    cy.visit('/admin/cadastrarprodutos');
   }
 
   fillProductName(name) {

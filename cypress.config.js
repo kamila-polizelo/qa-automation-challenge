@@ -1,10 +1,10 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
-  reporter: "mochawesome",
+  reporter: 'mochawesome',
 
   reporterOptions: {
-    reportDir: "cypress/reports/mochawesome",
+    reportDir: 'cypress/reports/mochawesome',
     overwrite: false,
     html: true,
     json: true,
@@ -19,15 +19,15 @@ module.exports = defineConfig({
 
   video: true,
 
-  videosFolder: "cypress/videos",
+  videosFolder: 'cypress/videos',
 
-  screenshotsFolder: "cypress/screenshots",
+  screenshotsFolder: 'cypress/screenshots',
 
   e2e: {
-    baseUrl: "https://front.serverest.dev",
+    baseUrl: 'https://front.serverest.dev',
 
     env: {
-      apiUrl: "https://serverest.dev",
+      apiUrl: 'https://serverest.dev',
     },
   },
 });

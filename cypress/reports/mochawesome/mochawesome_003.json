@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T22:23:01.547Z",
-    "end": "2026-05-17T22:23:01.863Z",
-    "duration": 316,
+    "start": "2026-05-17T22:59:05.863Z",
+    "end": "2026-05-17T22:59:06.462Z",
+    "duration": 599,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "84586eb3-8f7a-493f-847c-b36a2312c346",
+      "uuid": "55fbd3cd-347e-4a5f-827a-76a686df61a9",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\loginInvalidAPI.cy.js",
       "file": "cypress\\e2e\\api\\loginInvalidAPI.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0d97344b-aeb7-47cb-b1b6-ac04df35d0cc",
+          "uuid": "ebdef006-7239-4916-b2b0-2672eee9a28d",
           "title": "Invalid Login API",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Should not login with invalid credentials",
               "fullTitle": "Invalid Login API Should not login with invalid credentials",
               "timedOut": null,
-              "duration": 266,
+              "duration": 544,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const credentials = {\n  email: \"invalid@email.com\",\n  password: \"wrongPassword\"\n};\n_authService.AuthService.login(credentials, false).then(response => {\n  expect(response.status).to.eq(401);\n  expect(response.body.message).to.eq(\"Email e/ou senha inválidos\");\n});",
+              "code": "const credentials = {\n  email: 'invalid@email.com',\n  password: 'wrongPassword'\n};\n_authService.AuthService.login(credentials, false).then(response => {\n  expect(response.status).to.eq(401);\n  expect(response.body.message).to.eq('Email e/ou senha inválidos');\n});",
               "err": {},
-              "uuid": "858e811b-a9be-46b7-8418-48c2073cac31",
-              "parentUUID": "0d97344b-aeb7-47cb-b1b6-ac04df35d0cc",
+              "uuid": "65b5da8f-c648-4905-be15-f6e2b601e93a",
+              "parentUUID": "ebdef006-7239-4916-b2b0-2672eee9a28d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "858e811b-a9be-46b7-8418-48c2073cac31"
+            "65b5da8f-c648-4905-be15-f6e2b601e93a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 266,
+          "duration": 544,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

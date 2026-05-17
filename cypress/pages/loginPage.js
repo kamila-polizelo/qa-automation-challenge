@@ -1,6 +1,6 @@
 export class LoginPage {
   accessLoginPage() {
-    cy.visit("/login");
+    cy.visit('/login');
   }
 
   fillEmail(email) {

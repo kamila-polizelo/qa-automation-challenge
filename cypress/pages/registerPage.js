@@ -1,6 +1,6 @@
 export class RegisterPage {
   accessRegisterPage() {
-    cy.visit("/cadastrarusuarios");
+    cy.visit('/cadastrarusuarios');
   }
 
   fillName(name) {

@@ -1,31 +1,31 @@
 export const productSchema = {
-  type: "object",
+  type: 'object',
 
   properties: {
     quantidade: {
-      type: "number",
+      type: 'number',
     },
 
     produtos: {
-      type: "array",
+      type: 'array',
 
       items: {
-        type: "object",
+        type: 'object',
 
         properties: {
-          nome: { type: "string" },
+          nome: { type: 'string' },
 
-          preco: { type: "number" },
+          preco: { type: 'number' },
 
-          descricao: { type: "string" },
+          descricao: { type: 'string' },
 
-          quantidade: { type: "number" },
+          quantidade: { type: 'number' },
         },
 
-        required: ["nome", "preco", "descricao", "quantidade"],
+        required: ['nome', 'preco', 'descricao', 'quantidade'],
       },
     },
   },
 
-  required: ["quantidade", "produtos"],
+  required: ['quantidade', 'produtos'],
 };

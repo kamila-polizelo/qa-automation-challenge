@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T22:22:55.861Z",
-    "end": "2026-05-17T22:22:56.497Z",
-    "duration": 636,
+    "start": "2026-05-17T22:58:59.984Z",
+    "end": "2026-05-17T22:59:00.635Z",
+    "duration": 651,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "2bf376fd-a8df-4fcf-94f1-2f099a7a05ac",
+      "uuid": "c152ff8f-50fd-4e24-84fc-df388e8f29db",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\loginAPI.cy.js",
       "file": "cypress\\e2e\\api\\loginAPI.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "95eee8de-4b7d-4f9a-95e2-d1bb30181e9d",
+          "uuid": "a120180e-b488-4148-9646-fd6227295b4c",
           "title": "Login API",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Should login successfully",
               "fullTitle": "Login API Should login successfully",
               "timedOut": null,
-              "duration": 589,
+              "duration": 595,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const user = _userFactory.UserFactory.createUser();\n_userService.UserService.createUser(user).then(() => {\n  const credentials = {\n    email: user.email,\n    password: user.password\n  };\n  _authService.AuthService.login(credentials).then(response => {\n    expect(response.status).to.eq(200);\n    expect(response.body.message).to.eq(\"Login realizado com sucesso\");\n    expect(response.body).to.have.property(\"authorization\");\n  });\n});",
+              "code": "const user = _userFactory.UserFactory.createUser();\n_userService.UserService.createUser(user).then(() => {\n  const credentials = {\n    email: user.email,\n    password: user.password\n  };\n  _authService.AuthService.login(credentials).then(response => {\n    expect(response.status).to.eq(200);\n    expect(response.body.message).to.eq('Login realizado com sucesso');\n    expect(response.body).to.have.property('authorization');\n  });\n});",
               "err": {},
-              "uuid": "6f0cb862-31f8-469c-a5c7-81de99513e5d",
-              "parentUUID": "95eee8de-4b7d-4f9a-95e2-d1bb30181e9d",
+              "uuid": "3370f4ad-3519-4e25-89b7-f78f39558264",
+              "parentUUID": "a120180e-b488-4148-9646-fd6227295b4c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6f0cb862-31f8-469c-a5c7-81de99513e5d"
+            "3370f4ad-3519-4e25-89b7-f78f39558264"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 589,
+          "duration": 595,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -1,12 +1,12 @@
-import Ajv from "ajv";
-import { ProductService } from "../../services/productService";
-import { productSchema } from "../../schemas/productSchema";
+import Ajv from 'ajv';
+import { ProductService } from '../../services/productService';
+import { productSchema } from '../../schemas/productSchema';
 
-describe("Get Products API", () => {
+describe('Get Products API', () => {
   it(
-    "Should list products successfully",
+    'Should list products successfully',
     {
-      tags: ["@smoke", "@api"],
+      tags: ['@smoke', '@api'],
     },
     () => {
       ProductService.getProducts().then((response) => {
@@ -22,6 +22,6 @@ describe("Get Products API", () => {
 
         expect(valid).to.eq(true);
       });
-    },
+    }
   );
 });

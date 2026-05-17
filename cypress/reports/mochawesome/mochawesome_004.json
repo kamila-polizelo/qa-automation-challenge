@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T22:23:06.992Z",
-    "end": "2026-05-17T22:23:11.387Z",
-    "duration": 4395,
+    "start": "2026-05-17T22:59:11.466Z",
+    "end": "2026-05-17T22:59:16.208Z",
+    "duration": 4742,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3aa7871f-f412-486c-83a3-aa030a03da15",
+      "uuid": "3766b192-3791-45a7-8aa9-76594c1ddab3",
       "title": "",
       "fullFile": "cypress\\e2e\\frontend\\invalidLogin.cy.js",
       "file": "cypress\\e2e\\frontend\\invalidLogin.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c5e1162a-efc2-4e73-8e4d-717d3fddac9d",
+          "uuid": "8dc1ffff-b52d-4944-a938-a5ffd93dc57c",
           "title": "Invalid Login Frontend",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Should display error message for invalid credentials",
               "fullTitle": "Invalid Login Frontend Should display error message for invalid credentials",
               "timedOut": null,
-              "duration": 4328,
+              "duration": 4680,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "loginPage.accessLoginPage();\nloginPage.fillEmail(\"invalid@email.com\");\nloginPage.fillPassword(\"wrongPassword\");\nloginPage.clickLogin();\ncy.contains(\"Email e/ou senha inválidos\").should(\"be.visible\");",
+              "code": "loginPage.accessLoginPage();\nloginPage.fillEmail('invalid@email.com');\nloginPage.fillPassword('wrongPassword');\nloginPage.clickLogin();\ncy.contains('Email e/ou senha inválidos').should('be.visible');",
               "err": {},
-              "uuid": "6edc40a0-5e25-49e0-8282-3d3eff356900",
-              "parentUUID": "c5e1162a-efc2-4e73-8e4d-717d3fddac9d",
+              "uuid": "ebcfbc89-9552-4480-8e41-23ec2af894fd",
+              "parentUUID": "8dc1ffff-b52d-4944-a938-a5ffd93dc57c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6edc40a0-5e25-49e0-8282-3d3eff356900"
+            "ebcfbc89-9552-4480-8e41-23ec2af894fd"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4328,
+          "duration": 4680,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

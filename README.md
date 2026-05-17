@@ -1,6 +1,29 @@
 # QA Automation Challenge
 
-Automation framework developed using Cypress and JavaScript for frontend E2E and API testing, following modern QA engineering best practices.
+![Cypress](https://img.shields.io/badge/Cypress-15.15.0-brightgreen)
+![Node](https://img.shields.io/badge/Node.js-24-green)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![GitHub Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue)
+![Status](https://img.shields.io/badge/Status-Stable-success)
+
+Automation framework developed using Cypress and JavaScript for frontend E2E and API testing, following modern QA Engineering best practices.
+
+---
+
+# Project Overview
+
+This project was designed to simulate a real-world enterprise QA automation framework.
+
+The framework covers:
+
+- Frontend E2E automation
+- API automation
+- Positive and negative scenarios
+- Schema validation
+- CI/CD pipeline
+- Automated reporting
+- Scalable project architecture
+- Code quality standards
 
 ---
 
@@ -10,7 +33,11 @@ Automation framework developed using Cypress and JavaScript for frontend E2E and
 - JavaScript
 - Node.js
 - Faker
+- AJV (JSON Schema Validation)
+- Mochawesome
 - GitHub Actions
+- ESLint
+- Prettier
 
 ---
 
@@ -23,8 +50,10 @@ cypress
 │   ├── api
 │   └── frontend
 │
+├── factories
 ├── fixtures
 ├── pages
+├── schemas
 ├── services
 ├── support
 └── utils
@@ -37,6 +66,7 @@ cypress
 ## Frontend E2E
 
 - User login
+- Invalid login
 - User registration
 - Product registration
 
@@ -44,7 +74,9 @@ cypress
 
 - Create user
 - Login API
+- Invalid login API
 - Get products
+- Response schema validation
 
 ---
 
@@ -52,13 +84,36 @@ cypress
 
 - Page Object Model (POM)
 - Service Layer Pattern
+- Factory Pattern
 - Custom Commands
 - Dynamic Test Data with Faker
-- Reusable Components
+- Schema Validation with AJV
 - Separation of Responsibilities
-- CI/CD with GitHub Actions
+- Reusable Components
+- Retry Strategy
 - Headless Execution Support
-- Resilient API Validation
+- Scalable Test Architecture
+- Automated Reporting
+- CI/CD Integration
+- ESLint + Prettier
+
+---
+
+# Reporting and Observability
+
+The framework includes:
+
+- Mochawesome HTML reports
+- JSON reports
+- Automatic screenshots on failures
+- Automatic video recording
+- GitHub Actions artifacts
+
+Generated report location:
+
+```bash
+cypress/reports/final-report/report.html
+```
 
 ---
 
@@ -78,7 +133,7 @@ npm run cy:open
 
 ---
 
-# Run All Tests Headless
+# Run All Tests
 
 ```bash
 npm run cy:run
@@ -102,6 +157,38 @@ npm run test:api
 
 ---
 
+# Run Smoke Tests
+
+```bash
+npm run test:smoke
+```
+
+---
+
+# Generate Reports
+
+```bash
+npm run test:report
+```
+
+---
+
+# Lint and Code Formatting
+
+## Run ESLint
+
+```bash
+npm run lint
+```
+
+## Run Prettier
+
+```bash
+npm run format
+```
+
+---
+
 # CI/CD Pipeline
 
 This project includes a GitHub Actions pipeline configured to:
@@ -109,6 +196,8 @@ This project includes a GitHub Actions pipeline configured to:
 - Install dependencies
 - Execute Cypress tests automatically
 - Validate frontend and API scenarios
+- Generate automated reports
+- Upload screenshots and videos
 - Run on push and pull requests
 - Allow manual execution using workflow_dispatch
 
@@ -123,13 +212,13 @@ Workflow location:
 # Project Highlights
 
 - Frontend and API automation
-- Reusable framework architecture
+- Enterprise-style architecture
 - Dynamic and isolated test data
 - CI/CD ready
-- Enterprise-style project organization
-- Scalable automation structure
 - Stable and resilient tests
-- Manual pipeline execution support
+- Automated reports and artifacts
+- Scalable automation structure
+- Modern QA Engineering practices
 
 ---
 

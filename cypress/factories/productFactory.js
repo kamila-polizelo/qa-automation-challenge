@@ -1,12 +1,12 @@
-import { faker } from "@faker-js/faker";
+import { faker } from '@faker-js/faker';
 
 export class ProductFactory {
   static createProduct() {
     return {
       name: faker.commerce.productName(),
-      price: "500",
+      price: '500',
       description: faker.commerce.productDescription(),
-      quantity: "10",
+      quantity: '10',
     };
   }
 }

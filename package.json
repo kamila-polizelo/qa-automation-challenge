@@ -4,19 +4,17 @@
   "description": "QA automation framework using Cypress for frontend and API testing",
   "main": "index.js",
   "scripts": {
-  "cy:open": "cypress open",
-  "cy:run": "cypress run",
-  "test:frontend": "cypress run --spec cypress/e2e/frontend/**/*",
-  "test:api": "cypress run --spec cypress/e2e/api/**/*",
-
-  "clean:reports": "rimraf cypress/reports",
-
-  "merge-reports": "mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/report.json",
-
-  "generate-report": "marge cypress/reports/report.json -f report -o cypress/reports/final-report",
-
-  "test:report": "npm run clean:reports && npm run cy:run && npm run merge-reports && npm run generate-report"
-},
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:frontend": "cypress run --spec cypress/e2e/frontend/**/*",
+    "test:api": "cypress run --spec cypress/e2e/api/**/*",
+    "clean:reports": "rimraf cypress/reports",
+    "merge-reports": "mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/report.json",
+    "generate-report": "marge cypress/reports/report.json -f report -o cypress/reports/final-report",
+    "test:report": "npm run clean:reports && npm run cy:run && npm run merge-reports && npm run generate-report",
+    "lint": "eslint cypress/**/*.js",
+    "format": "prettier --write ."
+  },
   "keywords": [],
   "author": "Kamila Polizelo Fiori",
   "license": "ISC",
@@ -25,9 +23,13 @@
     "@faker-js/faker": "^10.4.0",
     "ajv": "^8.20.0",
     "cypress": "^15.15.0",
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-cypress": "^6.4.1",
     "mochawesome": "^7.1.4",
     "mochawesome-merge": "^5.1.1",
     "mochawesome-report-generator": "^6.3.2",
+    "prettier": "^3.8.3",
     "rimraf": "^6.1.3"
   }
 }

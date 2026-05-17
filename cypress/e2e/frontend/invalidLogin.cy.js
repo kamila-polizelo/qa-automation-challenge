@@ -1,23 +1,23 @@
-import { LoginPage } from "../../pages/loginPage";
+import { LoginPage } from '../../pages/loginPage';
 
 const loginPage = new LoginPage();
 
-describe("Invalid Login Frontend", () => {
+describe('Invalid Login Frontend', () => {
   it(
-    "Should display error message for invalid credentials",
+    'Should display error message for invalid credentials',
     {
-      tags: ["@frontend", "@negative"],
+      tags: ['@frontend', '@negative'],
     },
     () => {
       loginPage.accessLoginPage();
 
-      loginPage.fillEmail("invalid@email.com");
+      loginPage.fillEmail('invalid@email.com');
 
-      loginPage.fillPassword("wrongPassword");
+      loginPage.fillPassword('wrongPassword');
 
       loginPage.clickLogin();
 
-      cy.contains("Email e/ou senha inválidos").should("be.visible");
-    },
+      cy.contains('Email e/ou senha inválidos').should('be.visible');
+    }
   );
 });

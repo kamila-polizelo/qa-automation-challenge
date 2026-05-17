@@ -1,13 +1,13 @@
-import { RegisterPage } from "../../pages/registerPage";
-import { UserFactory } from "../../factories/userFactory";
+import { RegisterPage } from '../../pages/registerPage';
+import { UserFactory } from '../../factories/userFactory';
 
 const registerPage = new RegisterPage();
 
-describe("Register Frontend", () => {
+describe('Register Frontend', () => {
   it(
-    "Should register user successfully",
+    'Should register user successfully',
     {
-      tags: ["@regression", "@frontend"],
+      tags: ['@regression', '@frontend'],
     },
     () => {
       const user = UserFactory.createUser();
@@ -22,7 +22,7 @@ describe("Register Frontend", () => {
 
       registerPage.clickRegister();
 
-      cy.url().should("include", "/home");
-    },
+      cy.url().should('include', '/home');
+    }
   );
 });

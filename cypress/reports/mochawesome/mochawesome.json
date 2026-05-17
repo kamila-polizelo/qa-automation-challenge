@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T22:22:41.240Z",
-    "end": "2026-05-17T22:22:41.741Z",
-    "duration": 501,
+    "start": "2026-05-17T22:58:43.779Z",
+    "end": "2026-05-17T22:58:44.365Z",
+    "duration": 586,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "94277962-0320-4991-841a-32f88c5c6ea5",
+      "uuid": "313e4a21-7512-44fa-92b4-f607b4725088",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\createUser.cy.js",
       "file": "cypress\\e2e\\api\\createUser.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4b649891-a78e-4d9f-b2a5-441afc96f940",
+          "uuid": "0f874df9-3e12-4811-acd1-e02420a56b20",
           "title": "Create User API",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Should create user successfully",
               "fullTitle": "Create User API Should create user successfully",
               "timedOut": null,
-              "duration": 461,
+              "duration": 524,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const user = _userFactory.UserFactory.createUser();\n_userService.UserService.createUser(user).then(response => {\n  expect(response.status).to.eq(201);\n  expect(response.body.message).to.eq(\"Cadastro realizado com sucesso\");\n  expect(response.body).to.have.property(\"_id\");\n});",
+              "code": "const user = _userFactory.UserFactory.createUser();\n_userService.UserService.createUser(user).then(response => {\n  expect(response.status).to.eq(201);\n  expect(response.body.message).to.eq('Cadastro realizado com sucesso');\n  expect(response.body).to.have.property('_id');\n});",
               "err": {},
-              "uuid": "c1f32a61-6f08-48bf-8a31-ed371d4f0e74",
-              "parentUUID": "4b649891-a78e-4d9f-b2a5-441afc96f940",
+              "uuid": "fcd99325-4a2a-4628-83f3-14b435222d00",
+              "parentUUID": "0f874df9-3e12-4811-acd1-e02420a56b20",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c1f32a61-6f08-48bf-8a31-ed371d4f0e74"
+            "fcd99325-4a2a-4628-83f3-14b435222d00"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 461,
+          "duration": 524,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
