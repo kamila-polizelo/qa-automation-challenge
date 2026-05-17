@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T21:40:59.746Z",
-    "end": "2026-05-17T21:41:00.594Z",
-    "duration": 848,
+    "start": "2026-05-17T22:22:41.240Z",
+    "end": "2026-05-17T22:22:41.741Z",
+    "duration": 501,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4691a723-a0b5-4552-a2cb-2d6afa508c86",
+      "uuid": "94277962-0320-4991-841a-32f88c5c6ea5",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\createUser.cy.js",
       "file": "cypress\\e2e\\api\\createUser.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7f7634f6-faa9-4609-bade-6b383e12d23b",
+          "uuid": "4b649891-a78e-4d9f-b2a5-441afc96f940",
           "title": "Create User API",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Should create user successfully",
               "fullTitle": "Create User API Should create user successfully",
               "timedOut": null,
-              "duration": 744,
+              "duration": 461,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const user = {\n  nome: _faker.faker.person.fullName(),\n  email: _faker.faker.internet.email(),\n  password: 'teste123',\n  administrador: 'true'\n};\n_userService.UserService.createUser(user).then(response => {\n  expect(response.status).to.eq(201);\n  expect(response.body.message).to.eq('Cadastro realizado com sucesso');\n  expect(response.body).to.have.property('_id');\n});",
+              "code": "const user = _userFactory.UserFactory.createUser();\n_userService.UserService.createUser(user).then(response => {\n  expect(response.status).to.eq(201);\n  expect(response.body.message).to.eq(\"Cadastro realizado com sucesso\");\n  expect(response.body).to.have.property(\"_id\");\n});",
               "err": {},
-              "uuid": "78ccedb6-dde0-42f7-9df8-bb83633e3960",
-              "parentUUID": "7f7634f6-faa9-4609-bade-6b383e12d23b",
+              "uuid": "c1f32a61-6f08-48bf-8a31-ed371d4f0e74",
+              "parentUUID": "4b649891-a78e-4d9f-b2a5-441afc96f940",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "78ccedb6-dde0-42f7-9df8-bb83633e3960"
+            "c1f32a61-6f08-48bf-8a31-ed371d4f0e74"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 744,
+          "duration": 461,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

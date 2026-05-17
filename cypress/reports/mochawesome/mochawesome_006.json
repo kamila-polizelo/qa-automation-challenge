@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T21:41:48.061Z",
-    "end": "2026-05-17T21:41:58.481Z",
-    "duration": 10420,
+    "start": "2026-05-17T22:23:28.356Z",
+    "end": "2026-05-17T22:23:37.981Z",
+    "duration": 9625,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8a3fadb8-7d84-4fac-998e-baa098b3f846",
+      "uuid": "e420ae21-ad67-4e48-a2d9-696ba35104ff",
       "title": "",
       "fullFile": "cypress\\e2e\\frontend\\product.cy.js",
       "file": "cypress\\e2e\\frontend\\product.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "20683481-4b5c-4189-b391-e3b1aedebd58",
+          "uuid": "c9691253-55ea-4b76-958c-5380e451b102",
           "title": "Product Frontend",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Should register product successfully",
               "fullTitle": "Product Frontend Should register product successfully",
               "timedOut": null,
-              "duration": 10354,
+              "duration": 9562,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "const product = _productFactory.ProductFactory.createProduct();\ncy.login(this.createdUser.email, this.createdUser.password);\ncy.url().should(\"include\", \"/home\");\nproductPage.accessProductPage();\nproductPage.fillProductName(product.name);\nproductPage.fillPrice(product.price);\nproductPage.fillDescription(product.description);\nproductPage.fillQuantity(product.quantity);\nproductPage.clickRegisterProduct();\ncy.url().should(\"include\", \"/admin/listarprodutos\");\ncy.contains(product.name).should(\"be.visible\");",
               "err": {},
-              "uuid": "6c64f0d2-964d-49fa-bbd9-756908dff2cc",
-              "parentUUID": "20683481-4b5c-4189-b391-e3b1aedebd58",
+              "uuid": "32a51d1a-7412-4306-bcb1-8abb29886e54",
+              "parentUUID": "c9691253-55ea-4b76-958c-5380e451b102",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6c64f0d2-964d-49fa-bbd9-756908dff2cc"
+            "32a51d1a-7412-4306-bcb1-8abb29886e54"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10354,
+          "duration": 9562,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

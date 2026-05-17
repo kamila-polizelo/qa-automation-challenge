@@ -1,23 +1,22 @@
 import { AuthService } from "../../services/authService";
 
 describe("Invalid Login API", () => {
+  it(
+    "Should not login with invalid credentials",
+    {
+      tags: ["@api", "@negative"],
+    },
+    () => {
+      const credentials = {
+        email: "invalid@email.com",
+        password: "wrongPassword",
+      };
 
-  it("Should not login with invalid credentials", () => {
+      AuthService.login(credentials, false).then((response) => {
+        expect(response.status).to.eq(401);
 
-    const credentials = {
-      email: "invalid@email.com",
-      password: "wrongpassword"
-    };
-
-    AuthService.login(credentials, false).then((response) => {
-
-      expect(response.status).to.eq(401);
-
-      expect(response.body.message)
-        .to.eq("Email e/ou senha inválidos");
-
-    });
-
-  });
-
+        expect(response.body.message).to.eq("Email e/ou senha inválidos");
+      });
+    },
+  );
 });

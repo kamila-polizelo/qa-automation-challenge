@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T21:41:36.416Z",
-    "end": "2026-05-17T21:41:39.973Z",
-    "duration": 3557,
+    "start": "2026-05-17T22:23:16.663Z",
+    "end": "2026-05-17T22:23:20.285Z",
+    "duration": 3622,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c3200bcc-6f4c-4a60-b240-ed445e403de0",
+      "uuid": "529e89e3-a456-41e0-ad50-96ae2d24b7e1",
       "title": "",
       "fullFile": "cypress\\e2e\\frontend\\login.cy.js",
       "file": "cypress\\e2e\\frontend\\login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c5eb29dd-0240-45ee-acdc-16ea30536320",
+          "uuid": "b66690ff-621a-4f58-962d-bec95f3255a3",
           "title": "Login Frontend",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Should login successfully",
               "fullTitle": "Login Frontend Should login successfully",
               "timedOut": null,
-              "duration": 3453,
+              "duration": 3558,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.login(this.createdUser.email, this.createdUser.password);\ncy.url({\n  timeout: 10000\n}).should(\"include\", \"/home\");\ncy.contains(\"Home\").should(\"be.visible\");",
+              "code": "cy.login(this.createdUser.email, this.createdUser.password);\ncy.url().should(\"include\", \"/home\");",
               "err": {},
-              "uuid": "2ea1383f-9d00-4a19-9d8c-8dbfef32ac38",
-              "parentUUID": "c5eb29dd-0240-45ee-acdc-16ea30536320",
+              "uuid": "73d935ea-f0ff-4811-abe1-3090da642a11",
+              "parentUUID": "b66690ff-621a-4f58-962d-bec95f3255a3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2ea1383f-9d00-4a19-9d8c-8dbfef32ac38"
+            "73d935ea-f0ff-4811-abe1-3090da642a11"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3453,
+          "duration": 3558,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

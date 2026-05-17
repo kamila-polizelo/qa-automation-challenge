@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T21:42:06.522Z",
-    "end": "2026-05-17T21:42:10.557Z",
-    "duration": 4035,
+    "start": "2026-05-17T22:23:47.243Z",
+    "end": "2026-05-17T22:23:54.999Z",
+    "duration": 7756,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "02b032c7-c5ce-49ff-b4ec-a40118dc6a31",
+      "uuid": "13f945eb-6249-47b5-8c7d-c7f4a5653bd3",
       "title": "",
       "fullFile": "cypress\\e2e\\frontend\\register.cy.js",
       "file": "cypress\\e2e\\frontend\\register.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d7bfec61-dded-4220-ab22-e88992493c9d",
+          "uuid": "1bc12e6f-15a6-4e35-9b3e-d8eec43acd83",
           "title": "Register Frontend",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Should register user successfully",
               "fullTitle": "Register Frontend Should register user successfully",
               "timedOut": null,
-              "duration": 3987,
+              "duration": 7699,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const user = {\n  name: _faker.faker.person.fullName(),\n  email: _faker.faker.internet.email(),\n  password: \"teste123\"\n};\n_registerPage.default.accessRegisterPage();\n_registerPage.default.fillName(user.name);\n_registerPage.default.fillEmail(user.email);\n_registerPage.default.fillPassword(user.password);\n_registerPage.default.clickRegister();\ncy.contains(\"Cadastro realizado com sucesso\").should(\"be.visible\");",
+              "code": "const user = _userFactory.UserFactory.createUser();\nregisterPage.accessRegisterPage();\nregisterPage.fillName(user.nome);\nregisterPage.fillEmail(user.email);\nregisterPage.fillPassword(user.password);\nregisterPage.clickRegister();\ncy.url().should(\"include\", \"/home\");",
               "err": {},
-              "uuid": "cc4b3052-975d-4d40-b97a-c017bfd21a77",
-              "parentUUID": "d7bfec61-dded-4220-ab22-e88992493c9d",
+              "uuid": "73e3801a-624f-40f9-9414-b881485ac114",
+              "parentUUID": "1bc12e6f-15a6-4e35-9b3e-d8eec43acd83",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "cc4b3052-975d-4d40-b97a-c017bfd21a77"
+            "73e3801a-624f-40f9-9414-b881485ac114"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3987,
+          "duration": 7699,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

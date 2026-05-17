@@ -3,19 +3,25 @@ import { ProductService } from "../../services/productService";
 import { productSchema } from "../../schemas/productSchema";
 
 describe("Get Products API", () => {
-  it("Should list products successfully", () => {
-    ProductService.getProducts().then((response) => {
-      expect(response.status).to.eq(200);
+  it(
+    "Should list products successfully",
+    {
+      tags: ["@smoke", "@api"],
+    },
+    () => {
+      ProductService.getProducts().then((response) => {
+        expect(response.status).to.eq(200);
 
-      expect(response.duration).to.be.lessThan(2000);
+        expect(response.duration).to.be.lessThan(2000);
 
-      const ajv = new Ajv();
+        const ajv = new Ajv();
 
-      const validate = ajv.compile(productSchema);
+        const validate = ajv.compile(productSchema);
 
-      const valid = validate(response.body);
+        const valid = validate(response.body);
 
-      expect(valid).to.eq(true);
-    });
-  });
+        expect(valid).to.eq(true);
+      });
+    },
+  );
 });

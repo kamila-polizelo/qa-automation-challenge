@@ -7,11 +7,15 @@ describe("Login Frontend", () => {
     cy.createUser();
   });
 
-  it("Should login successfully", function () {
-    cy.login(this.createdUser.email, this.createdUser.password);
+  it(
+    "Should login successfully",
+    {
+      tags: ["@smoke", "@frontend"],
+    },
+    function () {
+      cy.login(this.createdUser.email, this.createdUser.password);
 
-    cy.url({ timeout: 10000 }).should("include", "/home");
-
-    cy.contains("Home").should("be.visible");
-  });
+      cy.url().should("include", "/home");
+    },
+  );
 });

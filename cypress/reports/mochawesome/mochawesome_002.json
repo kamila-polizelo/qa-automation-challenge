@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T21:41:14.924Z",
-    "end": "2026-05-17T21:41:15.472Z",
-    "duration": 548,
+    "start": "2026-05-17T22:22:55.861Z",
+    "end": "2026-05-17T22:22:56.497Z",
+    "duration": 636,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7f806333-e4ad-4e32-a355-7b7311c68ccf",
+      "uuid": "2bf376fd-a8df-4fcf-94f1-2f099a7a05ac",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\loginAPI.cy.js",
       "file": "cypress\\e2e\\api\\loginAPI.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c4ff8e0b-1aab-4b76-9951-4dfc4f4f53a1",
+          "uuid": "95eee8de-4b7d-4f9a-95e2-d1bb30181e9d",
           "title": "Login API",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should login successfully",
               "fullTitle": "Login API Should login successfully",
               "timedOut": null,
-              "duration": 501,
+              "duration": 589,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const user = _userFactory.UserFactory.createUser();\n_userService.UserService.createUser(user).then(() => {\n  const credentials = {\n    email: user.email,\n    password: user.password\n  };\n  _authService.AuthService.login(credentials).then(response => {\n    expect(response.status).to.eq(200);\n    expect(response.body.message).to.eq(\"Login realizado com sucesso\");\n    expect(response.body).to.have.property(\"authorization\");\n  });\n});",
               "err": {},
-              "uuid": "05ae6d18-2a41-4644-ba7f-61bd73c31d65",
-              "parentUUID": "c4ff8e0b-1aab-4b76-9951-4dfc4f4f53a1",
+              "uuid": "6f0cb862-31f8-469c-a5c7-81de99513e5d",
+              "parentUUID": "95eee8de-4b7d-4f9a-95e2-d1bb30181e9d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "05ae6d18-2a41-4644-ba7f-61bd73c31d65"
+            "6f0cb862-31f8-469c-a5c7-81de99513e5d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 501,
+          "duration": 589,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

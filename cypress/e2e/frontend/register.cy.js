@@ -1,24 +1,28 @@
-import registerPage from "../../pages/registerPage";
-import { faker } from "@faker-js/faker";
+import { RegisterPage } from "../../pages/registerPage";
+import { UserFactory } from "../../factories/userFactory";
+
+const registerPage = new RegisterPage();
 
 describe("Register Frontend", () => {
-  it("Should register user successfully", () => {
-    const user = {
-      name: faker.person.fullName(),
-      email: faker.internet.email(),
-      password: "teste123",
-    };
+  it(
+    "Should register user successfully",
+    {
+      tags: ["@regression", "@frontend"],
+    },
+    () => {
+      const user = UserFactory.createUser();
 
-    registerPage.accessRegisterPage();
+      registerPage.accessRegisterPage();
 
-    registerPage.fillName(user.name);
+      registerPage.fillName(user.nome);
 
-    registerPage.fillEmail(user.email);
+      registerPage.fillEmail(user.email);
 
-    registerPage.fillPassword(user.password);
+      registerPage.fillPassword(user.password);
 
-    registerPage.clickRegister();
+      registerPage.clickRegister();
 
-    cy.contains("Cadastro realizado com sucesso").should("be.visible");
-  });
+      cy.url().should("include", "/home");
+    },
+  );
 });

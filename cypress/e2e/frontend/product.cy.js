@@ -1,8 +1,6 @@
-import { LoginPage } from "../../pages/loginPage";
 import { ProductPage } from "../../pages/productPage";
 import { ProductFactory } from "../../factories/productFactory";
 
-const loginPage = new LoginPage();
 const productPage = new ProductPage();
 
 describe("Product Frontend", () => {
@@ -10,27 +8,33 @@ describe("Product Frontend", () => {
     cy.createUser();
   });
 
-  it("Should register product successfully", function () {
-    const product = ProductFactory.createProduct();
+  it(
+    "Should register product successfully",
+    {
+      tags: ["@regression", "@frontend"],
+    },
+    function () {
+      const product = ProductFactory.createProduct();
 
-    cy.login(this.createdUser.email, this.createdUser.password);
+      cy.login(this.createdUser.email, this.createdUser.password);
 
-    cy.url().should("include", "/home");
+      cy.url().should("include", "/home");
 
-    productPage.accessProductPage();
+      productPage.accessProductPage();
 
-    productPage.fillProductName(product.name);
+      productPage.fillProductName(product.name);
 
-    productPage.fillPrice(product.price);
+      productPage.fillPrice(product.price);
 
-    productPage.fillDescription(product.description);
+      productPage.fillDescription(product.description);
 
-    productPage.fillQuantity(product.quantity);
+      productPage.fillQuantity(product.quantity);
 
-    productPage.clickRegisterProduct();
+      productPage.clickRegisterProduct();
 
-    cy.url().should("include", "/admin/listarprodutos");
+      cy.url().should("include", "/admin/listarprodutos");
 
-    cy.contains(product.name).should("be.visible");
-  });
+      cy.contains(product.name).should("be.visible");
+    },
+  );
 });
