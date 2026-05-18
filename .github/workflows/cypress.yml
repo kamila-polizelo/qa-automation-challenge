@@ -34,7 +34,7 @@ jobs:
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
         with:
-          command: npm run cy:run
+          command: npm run test:report
 
       - name: Upload Mochawesome Report
         uses: actions/upload-artifact@v4
@@ -49,6 +49,7 @@ jobs:
         with:
           name: screenshots
           path: cypress/screenshots
+          if-no-files-found: ignore
 
       - name: Upload Videos
         uses: actions/upload-artifact@v4
@@ -56,3 +57,4 @@ jobs:
         with:
           name: videos
           path: cypress/videos
+          if-no-files-found: ignore

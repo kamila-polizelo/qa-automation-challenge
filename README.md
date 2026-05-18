@@ -6,24 +6,25 @@
 ![GitHub Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue)
 ![Status](https://img.shields.io/badge/Status-Stable-success)
 
-Automation framework developed using Cypress and JavaScript for frontend E2E and API testing, following modern QA Engineering best practices.
+Enterprise-style QA automation framework developed using Cypress and JavaScript for frontend E2E and API testing.
 
 ---
 
 # Project Overview
 
-This project was designed to simulate a real-world enterprise QA automation framework.
+This project was designed to simulate a scalable QA automation framework following modern QA Engineering best practices.
 
-The framework covers:
+The framework includes:
 
 - Frontend E2E automation
 - API automation
 - Positive and negative scenarios
-- Schema validation
+- JSON schema validation
 - CI/CD pipeline
 - Automated reporting
-- Scalable project architecture
-- Code quality standards
+- Test evidence generation
+- Reusable architecture
+- Code quality standardization
 
 ---
 
@@ -92,10 +93,10 @@ cypress
 - Reusable Components
 - Retry Strategy
 - Headless Execution Support
-- Scalable Test Architecture
 - Automated Reporting
 - CI/CD Integration
 - ESLint + Prettier
+- Partial Test Cleanup Strategy
 
 ---
 
@@ -195,8 +196,7 @@ This project includes a GitHub Actions pipeline configured to:
 
 - Install dependencies
 - Execute Cypress tests automatically
-- Validate frontend and API scenarios
-- Generate automated reports
+- Generate consolidated reports
 - Upload screenshots and videos
 - Run on push and pull requests
 - Allow manual execution using workflow_dispatch
@@ -206,6 +206,14 @@ Workflow location:
 ```bash
 .github/workflows/cypress.yml
 ```
+
+---
+
+# Notes
+
+This project uses the public ServeRest environment for automation practice purposes.
+
+Partial cleanup strategies were implemented to reduce impact on shared public test environments.
 
 ---
 

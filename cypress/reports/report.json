@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2026-05-17T22:58:43.779Z",
-    "end": "2026-05-17T23:00:12.284Z",
-    "duration": 88505
+    "start": "2026-05-18T00:18:27.714Z",
+    "end": "2026-05-18T00:19:57.882Z",
+    "duration": 90168
   },
   "results": [
     {
-      "uuid": "3d40c11f-6a6c-43fb-88cd-8d28a2568e92",
+      "uuid": "46e952ba-ab93-4de7-a098-fddf1ffd6ea8",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\getProducts.cy.js",
       "file": "cypress\\e2e\\api\\getProducts.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7230d337-2b4e-426b-912e-a98a56d45f0c",
+          "uuid": "0fa229bd-53fc-4426-8c82-f4749affc6bb",
           "title": "Get Products API",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Should list products successfully",
               "fullTitle": "Get Products API Should list products successfully",
               "timedOut": null,
-              "duration": 439,
+              "duration": 344,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "_productService.ProductService.getProducts().then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.duration).to.be.lessThan(2000);\n  const ajv = new _ajv.default();\n  const validate = ajv.compile(_productSchema.productSchema);\n  const valid = validate(response.body);\n  expect(valid).to.eq(true);\n});",
+              "code": "_productService.ProductService.getProducts().then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.duration).to.be.lessThan(4000);\n  const ajv = new _ajv.default();\n  const validate = ajv.compile(_productSchema.productSchema);\n  const valid = validate(response.body);\n  expect(valid).to.eq(true);\n});",
               "err": {},
-              "uuid": "c9044232-ddba-47cc-ac4c-8a9bb0c0fd04",
-              "parentUUID": "7230d337-2b4e-426b-912e-a98a56d45f0c",
+              "uuid": "30d8f9b2-5bcf-4681-acef-fd332784380b",
+              "parentUUID": "0fa229bd-53fc-4426-8c82-f4749affc6bb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c9044232-ddba-47cc-ac4c-8a9bb0c0fd04"
+            "30d8f9b2-5bcf-4681-acef-fd332784380b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 439,
+          "duration": 344,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -76,7 +76,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "c152ff8f-50fd-4e24-84fc-df388e8f29db",
+      "uuid": "69738f99-7634-4ed9-b3f4-c5bb2258dfe7",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\loginAPI.cy.js",
       "file": "cypress\\e2e\\api\\loginAPI.cy.js",
@@ -85,7 +85,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a120180e-b488-4148-9646-fd6227295b4c",
+          "uuid": "2afe2b5c-8195-49d3-959a-43c07e39b596",
           "title": "Login API",
           "fullFile": "",
           "file": "",
@@ -96,7 +96,7 @@
               "title": "Should login successfully",
               "fullTitle": "Login API Should login successfully",
               "timedOut": null,
-              "duration": 595,
+              "duration": 571,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -105,20 +105,20 @@
               "context": null,
               "code": "const user = _userFactory.UserFactory.createUser();\n_userService.UserService.createUser(user).then(() => {\n  const credentials = {\n    email: user.email,\n    password: user.password\n  };\n  _authService.AuthService.login(credentials).then(response => {\n    expect(response.status).to.eq(200);\n    expect(response.body.message).to.eq('Login realizado com sucesso');\n    expect(response.body).to.have.property('authorization');\n  });\n});",
               "err": {},
-              "uuid": "3370f4ad-3519-4e25-89b7-f78f39558264",
-              "parentUUID": "a120180e-b488-4148-9646-fd6227295b4c",
+              "uuid": "9bcd01e3-39aa-42ae-801b-74718118b78b",
+              "parentUUID": "2afe2b5c-8195-49d3-959a-43c07e39b596",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3370f4ad-3519-4e25-89b7-f78f39558264"
+            "9bcd01e3-39aa-42ae-801b-74718118b78b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 595,
+          "duration": 571,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -134,7 +134,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "55fbd3cd-347e-4a5f-827a-76a686df61a9",
+      "uuid": "da791307-9b39-4bd9-bcd7-e86828d4a4d9",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\loginInvalidAPI.cy.js",
       "file": "cypress\\e2e\\api\\loginInvalidAPI.cy.js",
@@ -143,7 +143,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ebdef006-7239-4916-b2b0-2672eee9a28d",
+          "uuid": "367dd749-6db4-4925-b3bb-9a13dc367911",
           "title": "Invalid Login API",
           "fullFile": "",
           "file": "",
@@ -154,7 +154,7 @@
               "title": "Should not login with invalid credentials",
               "fullTitle": "Invalid Login API Should not login with invalid credentials",
               "timedOut": null,
-              "duration": 544,
+              "duration": 326,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -163,20 +163,20 @@
               "context": null,
               "code": "const credentials = {\n  email: 'invalid@email.com',\n  password: 'wrongPassword'\n};\n_authService.AuthService.login(credentials, false).then(response => {\n  expect(response.status).to.eq(401);\n  expect(response.body.message).to.eq('Email e/ou senha inválidos');\n});",
               "err": {},
-              "uuid": "65b5da8f-c648-4905-be15-f6e2b601e93a",
-              "parentUUID": "ebdef006-7239-4916-b2b0-2672eee9a28d",
+              "uuid": "6c446053-8276-412c-b02a-0a90b47e394d",
+              "parentUUID": "367dd749-6db4-4925-b3bb-9a13dc367911",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "65b5da8f-c648-4905-be15-f6e2b601e93a"
+            "6c446053-8276-412c-b02a-0a90b47e394d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 544,
+          "duration": 326,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -192,7 +192,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "3766b192-3791-45a7-8aa9-76594c1ddab3",
+      "uuid": "acff5f05-567f-4848-ac06-1b9cd425d734",
       "title": "",
       "fullFile": "cypress\\e2e\\frontend\\invalidLogin.cy.js",
       "file": "cypress\\e2e\\frontend\\invalidLogin.cy.js",
@@ -201,7 +201,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8dc1ffff-b52d-4944-a938-a5ffd93dc57c",
+          "uuid": "f7376a30-06f1-4bfa-85e9-b0c3ef284cf3",
           "title": "Invalid Login Frontend",
           "fullFile": "",
           "file": "",
@@ -212,7 +212,7 @@
               "title": "Should display error message for invalid credentials",
               "fullTitle": "Invalid Login Frontend Should display error message for invalid credentials",
               "timedOut": null,
-              "duration": 4680,
+              "duration": 4913,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -221,20 +221,20 @@
               "context": null,
               "code": "loginPage.accessLoginPage();\nloginPage.fillEmail('invalid@email.com');\nloginPage.fillPassword('wrongPassword');\nloginPage.clickLogin();\ncy.contains('Email e/ou senha inválidos').should('be.visible');",
               "err": {},
-              "uuid": "ebcfbc89-9552-4480-8e41-23ec2af894fd",
-              "parentUUID": "8dc1ffff-b52d-4944-a938-a5ffd93dc57c",
+              "uuid": "5dbf86b2-4b0b-4555-bcb8-1fc909dae495",
+              "parentUUID": "f7376a30-06f1-4bfa-85e9-b0c3ef284cf3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ebcfbc89-9552-4480-8e41-23ec2af894fd"
+            "5dbf86b2-4b0b-4555-bcb8-1fc909dae495"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4680,
+          "duration": 4913,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -250,7 +250,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "3bbff81d-b8aa-4725-9d57-da49a7fb95f2",
+      "uuid": "bdb61958-dded-4fc5-9b7b-fae7fd3d0c0e",
       "title": "",
       "fullFile": "cypress\\e2e\\frontend\\login.cy.js",
       "file": "cypress\\e2e\\frontend\\login.cy.js",
@@ -259,7 +259,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6a4f4974-c4f6-4ffb-982f-5c9a0829e8ae",
+          "uuid": "b8fedfbf-8b42-43e0-8447-56d0161c2b2e",
           "title": "Login Frontend",
           "fullFile": "",
           "file": "",
@@ -270,7 +270,7 @@
               "title": "Should login successfully",
               "fullTitle": "Login Frontend Should login successfully",
               "timedOut": null,
-              "duration": 3684,
+              "duration": 4069,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -279,20 +279,20 @@
               "context": null,
               "code": "cy.login(this.createdUser.email, this.createdUser.password);\ncy.url().should('include', '/home');",
               "err": {},
-              "uuid": "577146fd-3186-42d7-bc9b-c3ba89b88b1f",
-              "parentUUID": "6a4f4974-c4f6-4ffb-982f-5c9a0829e8ae",
+              "uuid": "ac1972ab-96ab-47ca-a451-9dc35da2feee",
+              "parentUUID": "b8fedfbf-8b42-43e0-8447-56d0161c2b2e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "577146fd-3186-42d7-bc9b-c3ba89b88b1f"
+            "ac1972ab-96ab-47ca-a451-9dc35da2feee"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3684,
+          "duration": 4069,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -308,7 +308,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "d0697fbf-69c0-4ee5-b5cd-bf3760a2d4f9",
+      "uuid": "7dcb16bc-bf1d-4e35-8268-8ce9d9151948",
       "title": "",
       "fullFile": "cypress\\e2e\\frontend\\product.cy.js",
       "file": "cypress\\e2e\\frontend\\product.cy.js",
@@ -317,7 +317,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a3d3c852-ac3a-413e-a2b1-99dab2824761",
+          "uuid": "41a482c4-d59e-45df-9875-2d3db6e44cbd",
           "title": "Product Frontend",
           "fullFile": "",
           "file": "",
@@ -328,7 +328,7 @@
               "title": "Should register product successfully",
               "fullTitle": "Product Frontend Should register product successfully",
               "timedOut": null,
-              "duration": 9375,
+              "duration": 9486,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -337,20 +337,20 @@
               "context": null,
               "code": "const product = _productFactory.ProductFactory.createProduct();\ncy.login(this.createdUser.email, this.createdUser.password);\ncy.url().should('include', '/home');\nproductPage.accessProductPage();\nproductPage.fillProductName(product.name);\nproductPage.fillPrice(product.price);\nproductPage.fillDescription(product.description);\nproductPage.fillQuantity(product.quantity);\nproductPage.clickRegisterProduct();\ncy.url().should('include', '/admin/listarprodutos');\ncy.contains(product.name).should('be.visible');",
               "err": {},
-              "uuid": "91d10f49-d6e2-4459-b499-ecd6c4b01b29",
-              "parentUUID": "a3d3c852-ac3a-413e-a2b1-99dab2824761",
+              "uuid": "1a225bd8-62ad-4ee4-bfb3-10301cc2639e",
+              "parentUUID": "41a482c4-d59e-45df-9875-2d3db6e44cbd",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "91d10f49-d6e2-4459-b499-ecd6c4b01b29"
+            "1a225bd8-62ad-4ee4-bfb3-10301cc2639e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 9375,
+          "duration": 9486,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -366,7 +366,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "605196a0-d534-4bfd-89cc-3549bd2b9745",
+      "uuid": "69a4f9eb-86d6-4ccb-a836-8afca1617d51",
       "title": "",
       "fullFile": "cypress\\e2e\\frontend\\register.cy.js",
       "file": "cypress\\e2e\\frontend\\register.cy.js",
@@ -375,7 +375,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7493e378-26aa-4e70-aec3-cc71a8f87b0a",
+          "uuid": "e039279e-5e3e-4716-9a1a-cdb832e0be31",
           "title": "Register Frontend",
           "fullFile": "",
           "file": "",
@@ -386,7 +386,7 @@
               "title": "Should register user successfully",
               "fullTitle": "Register Frontend Should register user successfully",
               "timedOut": null,
-              "duration": 6359,
+              "duration": 6051,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -395,20 +395,20 @@
               "context": null,
               "code": "const user = _userFactory.UserFactory.createUser();\nregisterPage.accessRegisterPage();\nregisterPage.fillName(user.nome);\nregisterPage.fillEmail(user.email);\nregisterPage.fillPassword(user.password);\nregisterPage.clickRegister();\ncy.url().should('include', '/home');",
               "err": {},
-              "uuid": "d7d46c10-af21-4ef0-a732-035c037f09d6",
-              "parentUUID": "7493e378-26aa-4e70-aec3-cc71a8f87b0a",
+              "uuid": "96a5e08e-0fe3-46ce-acd6-caaf2a8de27c",
+              "parentUUID": "e039279e-5e3e-4716-9a1a-cdb832e0be31",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d7d46c10-af21-4ef0-a732-035c037f09d6"
+            "96a5e08e-0fe3-46ce-acd6-caaf2a8de27c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6359,
+          "duration": 6051,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -424,7 +424,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "313e4a21-7512-44fa-92b4-f607b4725088",
+      "uuid": "f75b9ada-dcbe-4dbc-a3fc-53563634fd94",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\createUser.cy.js",
       "file": "cypress\\e2e\\api\\createUser.cy.js",
@@ -433,7 +433,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0f874df9-3e12-4811-acd1-e02420a56b20",
+          "uuid": "da5020d5-37ad-4d5a-a4ee-bf4311e485bd",
           "title": "Create User API",
           "fullFile": "",
           "file": "",
@@ -444,29 +444,29 @@
               "title": "Should create user successfully",
               "fullTitle": "Create User API Should create user successfully",
               "timedOut": null,
-              "duration": 524,
+              "duration": 642,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const user = _userFactory.UserFactory.createUser();\n_userService.UserService.createUser(user).then(response => {\n  expect(response.status).to.eq(201);\n  expect(response.body.message).to.eq('Cadastro realizado com sucesso');\n  expect(response.body).to.have.property('_id');\n});",
+              "code": "const user = _userFactory.UserFactory.createUser();\n_userService.UserService.createUser(user).then(response => {\n  userId = response.body._id;\n  expect(response.status).to.eq(201);\n  expect(response.body.message).to.eq('Cadastro realizado com sucesso');\n  expect(response.body).to.have.property('_id');\n});",
               "err": {},
-              "uuid": "fcd99325-4a2a-4628-83f3-14b435222d00",
-              "parentUUID": "0f874df9-3e12-4811-acd1-e02420a56b20",
+              "uuid": "e481b8f7-7f26-44aa-99f3-3b160de025b8",
+              "parentUUID": "da5020d5-37ad-4d5a-a4ee-bf4311e485bd",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "fcd99325-4a2a-4628-83f3-14b435222d00"
+            "e481b8f7-7f26-44aa-99f3-3b160de025b8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 524,
+          "duration": 642,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

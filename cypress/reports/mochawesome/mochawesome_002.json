@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T22:58:59.984Z",
-    "end": "2026-05-17T22:59:00.635Z",
-    "duration": 651,
+    "start": "2026-05-18T00:18:43.949Z",
+    "end": "2026-05-18T00:18:44.576Z",
+    "duration": 627,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c152ff8f-50fd-4e24-84fc-df388e8f29db",
+      "uuid": "69738f99-7634-4ed9-b3f4-c5bb2258dfe7",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\loginAPI.cy.js",
       "file": "cypress\\e2e\\api\\loginAPI.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a120180e-b488-4148-9646-fd6227295b4c",
+          "uuid": "2afe2b5c-8195-49d3-959a-43c07e39b596",
           "title": "Login API",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should login successfully",
               "fullTitle": "Login API Should login successfully",
               "timedOut": null,
-              "duration": 595,
+              "duration": 571,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const user = _userFactory.UserFactory.createUser();\n_userService.UserService.createUser(user).then(() => {\n  const credentials = {\n    email: user.email,\n    password: user.password\n  };\n  _authService.AuthService.login(credentials).then(response => {\n    expect(response.status).to.eq(200);\n    expect(response.body.message).to.eq('Login realizado com sucesso');\n    expect(response.body).to.have.property('authorization');\n  });\n});",
               "err": {},
-              "uuid": "3370f4ad-3519-4e25-89b7-f78f39558264",
-              "parentUUID": "a120180e-b488-4148-9646-fd6227295b4c",
+              "uuid": "9bcd01e3-39aa-42ae-801b-74718118b78b",
+              "parentUUID": "2afe2b5c-8195-49d3-959a-43c07e39b596",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3370f4ad-3519-4e25-89b7-f78f39558264"
+            "9bcd01e3-39aa-42ae-801b-74718118b78b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 595,
+          "duration": 571,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

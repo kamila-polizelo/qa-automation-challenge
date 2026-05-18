@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T22:59:51.739Z",
-    "end": "2026-05-17T23:00:12.284Z",
-    "duration": 20545,
+    "start": "2026-05-18T00:19:37.381Z",
+    "end": "2026-05-18T00:19:57.882Z",
+    "duration": 20501,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "605196a0-d534-4bfd-89cc-3549bd2b9745",
+      "uuid": "69a4f9eb-86d6-4ccb-a836-8afca1617d51",
       "title": "",
       "fullFile": "cypress\\e2e\\frontend\\register.cy.js",
       "file": "cypress\\e2e\\frontend\\register.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7493e378-26aa-4e70-aec3-cc71a8f87b0a",
+          "uuid": "e039279e-5e3e-4716-9a1a-cdb832e0be31",
           "title": "Register Frontend",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should register user successfully",
               "fullTitle": "Register Frontend Should register user successfully",
               "timedOut": null,
-              "duration": 6359,
+              "duration": 6051,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const user = _userFactory.UserFactory.createUser();\nregisterPage.accessRegisterPage();\nregisterPage.fillName(user.nome);\nregisterPage.fillEmail(user.email);\nregisterPage.fillPassword(user.password);\nregisterPage.clickRegister();\ncy.url().should('include', '/home');",
               "err": {},
-              "uuid": "d7d46c10-af21-4ef0-a732-035c037f09d6",
-              "parentUUID": "7493e378-26aa-4e70-aec3-cc71a8f87b0a",
+              "uuid": "96a5e08e-0fe3-46ce-acd6-caaf2a8de27c",
+              "parentUUID": "e039279e-5e3e-4716-9a1a-cdb832e0be31",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d7d46c10-af21-4ef0-a732-035c037f09d6"
+            "96a5e08e-0fe3-46ce-acd6-caaf2a8de27c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6359,
+          "duration": 6051,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

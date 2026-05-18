@@ -7,11 +7,11 @@ export class UserService {
     });
   }
 
-  static login(credentials) {
+  static deleteUser(userId) {
     return cy.request({
-      method: 'POST',
-      url: `${Cypress.env('apiUrl')}/login`,
-      body: credentials,
+      method: 'DELETE',
+      url: `${Cypress.env('apiUrl')}/usuarios/${userId}`,
+      failOnStatusCode: false,
     });
   }
 }

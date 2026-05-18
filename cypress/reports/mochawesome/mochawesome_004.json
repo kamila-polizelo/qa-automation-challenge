@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T22:59:11.466Z",
-    "end": "2026-05-17T22:59:16.208Z",
-    "duration": 4742,
+    "start": "2026-05-18T00:18:56.503Z",
+    "end": "2026-05-18T00:19:01.480Z",
+    "duration": 4977,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3766b192-3791-45a7-8aa9-76594c1ddab3",
+      "uuid": "acff5f05-567f-4848-ac06-1b9cd425d734",
       "title": "",
       "fullFile": "cypress\\e2e\\frontend\\invalidLogin.cy.js",
       "file": "cypress\\e2e\\frontend\\invalidLogin.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8dc1ffff-b52d-4944-a938-a5ffd93dc57c",
+          "uuid": "f7376a30-06f1-4bfa-85e9-b0c3ef284cf3",
           "title": "Invalid Login Frontend",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should display error message for invalid credentials",
               "fullTitle": "Invalid Login Frontend Should display error message for invalid credentials",
               "timedOut": null,
-              "duration": 4680,
+              "duration": 4913,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "loginPage.accessLoginPage();\nloginPage.fillEmail('invalid@email.com');\nloginPage.fillPassword('wrongPassword');\nloginPage.clickLogin();\ncy.contains('Email e/ou senha inválidos').should('be.visible');",
               "err": {},
-              "uuid": "ebcfbc89-9552-4480-8e41-23ec2af894fd",
-              "parentUUID": "8dc1ffff-b52d-4944-a938-a5ffd93dc57c",
+              "uuid": "5dbf86b2-4b0b-4555-bcb8-1fc909dae495",
+              "parentUUID": "f7376a30-06f1-4bfa-85e9-b0c3ef284cf3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ebcfbc89-9552-4480-8e41-23ec2af894fd"
+            "5dbf86b2-4b0b-4555-bcb8-1fc909dae495"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4680,
+          "duration": 4913,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

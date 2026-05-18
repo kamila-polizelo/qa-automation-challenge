@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-05-17T22:59:05.863Z",
-    "end": "2026-05-17T22:59:06.462Z",
-    "duration": 599,
+    "start": "2026-05-18T00:18:50.429Z",
+    "end": "2026-05-18T00:18:50.825Z",
+    "duration": 396,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "55fbd3cd-347e-4a5f-827a-76a686df61a9",
+      "uuid": "da791307-9b39-4bd9-bcd7-e86828d4a4d9",
       "title": "",
       "fullFile": "cypress\\e2e\\api\\loginInvalidAPI.cy.js",
       "file": "cypress\\e2e\\api\\loginInvalidAPI.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ebdef006-7239-4916-b2b0-2672eee9a28d",
+          "uuid": "367dd749-6db4-4925-b3bb-9a13dc367911",
           "title": "Invalid Login API",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should not login with invalid credentials",
               "fullTitle": "Invalid Login API Should not login with invalid credentials",
               "timedOut": null,
-              "duration": 544,
+              "duration": 326,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const credentials = {\n  email: 'invalid@email.com',\n  password: 'wrongPassword'\n};\n_authService.AuthService.login(credentials, false).then(response => {\n  expect(response.status).to.eq(401);\n  expect(response.body.message).to.eq('Email e/ou senha inválidos');\n});",
               "err": {},
-              "uuid": "65b5da8f-c648-4905-be15-f6e2b601e93a",
-              "parentUUID": "ebdef006-7239-4916-b2b0-2672eee9a28d",
+              "uuid": "6c446053-8276-412c-b02a-0a90b47e394d",
+              "parentUUID": "367dd749-6db4-4925-b3bb-9a13dc367911",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "65b5da8f-c648-4905-be15-f6e2b601e93a"
+            "6c446053-8276-412c-b02a-0a90b47e394d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 544,
+          "duration": 326,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
